@@ -19,7 +19,7 @@ public class InventoryServiceApplication {
         return args -> {
             Inventory inventory = new Inventory();
             inventory.setSkewCode("PROD001");
-            inventory.setQuantity(10);
+            inventory.setQuantity(100);
 
             Inventory inventory1 = new Inventory();
             inventory1.setSkewCode("PROD002");

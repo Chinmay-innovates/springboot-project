@@ -1,10 +1,12 @@
 package com.ms.inventory.controller;
 
-import com.ms.inventory.repo.InventoryRepo;
+import com.ms.inventory.dto.InventoryResponse;
 import com.ms.inventory.service.InventoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/inventory")
@@ -13,9 +15,10 @@ public class InventoryController {
 
     private final InventoryService inventoryService;
 
-    @GetMapping("/{skew-code}")
+    @GetMapping()
     @ResponseStatus(HttpStatus.OK)
-    public boolean isInStock(@PathVariable("skew-code") String skewCode) {
+    // http://locahost:8082/api/inventory?skewCode=PROD001&skewCode=PROD002
+    public List<InventoryResponse> isInStock(@RequestParam List<String> skewCode) {
         return inventoryService.isInStock(skewCode);
     }
 }
