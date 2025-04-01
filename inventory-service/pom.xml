@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ms</groupId>
-    <artifactId>order-service</artifactId>
+    <artifactId>inventory-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>order-service</name>
-    <description>order-service</description>
+    <name>inventory-service</name>
+    <description>inventory-service</description>
     <url/>
     <licenses>
         <license/>
@@ -54,16 +54,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>mysql</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -94,4 +84,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
